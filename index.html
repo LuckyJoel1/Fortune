@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel's | Portfolio</title>
+  <style>
+    :root {  
+      --green-main: #2e8b57;
+      --green-accent: #033d1d;
+      --light-grey: #ffffff;
+      --text-dark: #1a1a1a;
+      --text-light: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light-grey);
+      color: var(--text-dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--green-main);
+      color: var(--text-light);
+      padding: 1.5rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .logo-alone img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--green-accent);
+      object-fit: cover;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #e6ffe6;
+    }
+
+    .profile-center {
+      text-align: center;
+      margin: 2rem auto 1rem;
+    }
+
+    .profile-center img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid var(--green-accent);
+      box-shadow: 0 0 15px rgba(46, 139, 87, 0.3);
+      object-fit: cover;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .profile-center h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.8rem;
+      color: var(--green-accent);
+    }
+
+    .profile-center p {
+      color: var(--text-dark);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--green-main);
+      padding-left: 1rem;
+      color: var(--green-main);
+    }
+
+    .services,
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 128, 0, 0.2);
+    }
+
+    .card h3 {
+      color: var(--green-accent);
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-btn,
+    .contact a {
+      background-color: var(--green-main);
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem 0.3rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .contact-btn:hover,
+    .contact a:hover {
+      background-color: var(--green-accent);
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-alone">
+        <img src="logo.jpg" alt="Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="profile-center">
+    <img src="1752075748960.jpg" alt="Profile Picture" />
+    <h1>Fortune Design</h1>
+    <p>Multi-Skilled Freelancer | Graphic Designer | Data Entry | Virtual Assistant</p>
+  </div>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a versatile freelancer with skills in graphic design, data entry,
+      and virtual assistance. I help clients present their work professionally,
+      stay organized, and save time. I work with tools like Canva, Corel Draw, Microsoft
+      Word, Excel, Powerpoint, Microsoft Access for tracking sales, Google Workspace and Email.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <ul>
+          <li>Logo Design</li>
+          <li>Flyers & Posters</li>
+          <li>Social Media Graphics</li>
+          <li>Identity Card Design</li>
+          <li>Certificate Design</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Typing & Data Entry</h3>
+        <ul>
+          <li>Fast & Accurate Typing</li>
+          <li>Excel Data Entry</li>
+          <li>PDF to Word Conversion</li>
+          <li>Document Arrangement</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Virtual Assistance</h3>
+        <ul>
+          <li>Email & Schedule Management</li>
+          <li>Online Research</li>
+          <li>Task Tracking & Organization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <img src="Coffee Design.jpg" alt="Sample 1" />
+        <p>Logo Design for Coffee Brand</p>
+      </div>
+      <div class="card">
+        <img src="1751772800257.jpg" alt="Sample 2" />
+        <p>Excel Data Entry Project</p>
+      </div>
+      <div class="card">
+        <img src="1751772800262.jpg" alt="Sample 3" />
+        <p>Task Calendar & Scheduling Support</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact">
+      <p>Feel free to reach out for collaborations or freelance projects:</p>
+      <a href="mailto:luckyjoel727@gmail.com">📧 Email Me</a>
+      <a href="https://wa.me/message/RUGWN7LMON2JI1">💬 WhatsApp Chat</a>
+      <a href="RESUME.pdf" download class="contact-btn">📄 Download Resume</a>
+      <a href="Porfolio Proposal.pdf" download class="contact-btn">📄 Download Proposal Letter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Joel'sWorx. | Portfolio Website</p>
+  </footer>
+
+</body>
+</html>
